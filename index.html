@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+    
+    /*Variables*/
+    :root {
+      --Red: hsl(0, 78%, 62%);
+      --Cyan: hsl(180, 62%, 55%);
+      --Orange: hsl(34, 97%, 64%);
+      --Blue: hsl(212, 86%, 64%);
+      --Very-Dark-Blue: hsl(234, 12%, 34%);
+      --Grayish-Blue: hsl(229, 6%, 66%);
+      --Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+
+    /*resets*/
+    *, ::before, ::after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-size: 15px;
+      background-color: var(--Very-Light-Gray);
+      font-family: 'Poppins', sans-serif;
+      color: var(--Grayish-Blue);
+    }
+
+    /*Body*/
+    main {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .presentation {
+      max-width: 500px;
+      line-height: 6px;
+    }
+    h1, h2 {
+      color: var(--Very-Dark-Blue);
+    }
+    .presentation h1 {
+      font-weight: 600;
+    }
+    .presentation h2 {
+      font-weight: 200;
+    }
+    .presentation h1, .presentation h2 {
+      font-size: 30px;
+      text-align: center;
+      line-height: 40px;
+    }
+    .presentation p {
+      font-weight: 200;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 25px;
+    }
+
+    /*The grid and details*/
+
+    .block {  
+      display: grid;
+      margin: 20px;
+      grid-template-columns: 0.7fr 0.7fr 0.7fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        ". builder ."
+        "supervisor builder calculator"
+        "supervisor karma calculator"
+        ". karma .";
+    }
+
+  .builder { 
+    grid-area: builder;
+    border-top: 0.3em solid var(--Red);
+   }
+  .supervisor { 
+    grid-area: supervisor; 
+    border-top: 0.3em solid var(--Cyan);
+  }
+  .calculator { 
+    grid-area: calculator;
+    border-top: 0.3em solid var(--Blue);
+  }
+  .karma { 
+    grid-area: karma;
+    border-top: 0.3em solid var(--Orange); 
+  }
+
+  .card h1, .card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .card {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 30px;
+    border-radius: 10px;
+  }
+  .icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    width: 100%;
+    
+  }
+
+  /*Attribution*/
+  .attribution {
+    text-align: right;
+
+  }
+  .attribution a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--Very-Dark-Blue);
+  }
+  /*Responsive*/
+  @media all and (max-width: 800px) {
+    main {
+      height: auto;
+    }
+    .block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+    
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="presentation">
+        <h2>Reliable, efficient delivery</h2>
+        <h1>Powered by Technology</h1>
+        <p> Our Artificial Intelligence powered tools use millions of project data points 
+          to ensure that your project is successful
+        </p>
+      </div>
+
+      <div class="block">
+        <div class="card builder">
+          <h2>Team Builder</h2>
+          <p>Scans our talent network to create the optimal team for your project</p>
+          <div class="icon"><img src="images/icon-team-builder.svg" alt="icon for team builder"></div>
+        </div>
+        <div class="card supervisor">
+          <h2> Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+          <div class="icon"><img src="images/icon-supervisor.svg" alt="icon for supervisor"></div>
+        </div>
+        <div class="card calculator">
+          <h2> Calculator</h2>
+          <p> Uses data from past projects to provide better delivery estimates</p>
+          <div class="icon"><img src="images/icon-calculator.svg" alt="icon for Calculator"></div>
+        </div>
+        <div class="card karma">
+          <h2>Karma</h2>
+          <p>  Regularly evaluates our talent to ensure quality</p>
+          <div class="icon"><img src="images/icon-karma.svg" alt="icon for karma"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Hatchino</a>.
+    </p>
+  </footer>
+</body>
+</html>
