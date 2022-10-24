@@ -34,17 +34,14 @@
       background-color: var(--Very-Light-Gray);
       font-family: 'Poppins', sans-serif;
       color: var(--Grayish-Blue);
-    }
-
-    /*Body*/
-    main {
-      width: 100%;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
+
+    /*Header*/
     section {
       display: flex;
       flex-direction: column;
@@ -108,7 +105,6 @@
     grid-area: karma;
     border-top: 0.3em solid var(--Orange); 
   }
-
   .card h1, .card h2 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -127,16 +123,16 @@
   }
 
   /*Attribution*/
-  .attribution {
-    text-align: right;
 
-  }
   .attribution a {
     text-decoration: none;
     font-weight: bold;
     color: var(--Very-Dark-Blue);
+    font-size: 13px;
   }
+
   /*Responsive*/
+
   @media all and (max-width: 800px) {
     main {
       height: auto;
@@ -147,45 +143,40 @@
       gap: 20px;
     }
   }
-    
-
 
   </style>
 </head>
 <body>
+  <header class="presentation">
+    <h2>Reliable, efficient delivery</h2>
+    <h1>Powered by Technology</h1>
+    <p> Our Artificial Intelligence powered tools use millions of project data points 
+      to ensure that your project is successful
+    </p>
+  </header>
   <main>
-    <section>
-      <div class="presentation">
-        <h2>Reliable, efficient delivery</h2>
-        <h1>Powered by Technology</h1>
-        <p> Our Artificial Intelligence powered tools use millions of project data points 
-          to ensure that your project is successful
-        </p>
-      </div>
-
       <div class="grid-container">
-        <article class="card builder">
+        <div class="card builder">
           <h2>Team Builder</h2>
           <p>Scans our talent network to create the optimal team for your project</p>
           <div class="icon"><img src="images/icon-team-builder.svg" alt="icon for team builder"></div>
-        </article>
-        <article class="card supervisor">
+        </div>
+        <div class="card supervisor">
           <h2> Supervisor</h2>
           <p>Monitors activity to identify project grid-containers</p>
           <div class="icon"><img src="images/icon-supervisor.svg" alt="icon for supervisor"></div>
-        </article>
-        <article class="card calculator">
+        </div>
+        <div class="card calculator">
           <h2> Calculator</h2>
           <p> Uses data from past projects to provide better delivery estimates</p>
-          <div class="icon"><img src="images/icon-calculator.svg" alt="icon for Calculator"></article>
-        </article>
-        <article class="card karma">
+          <div class="icon"><img src="images/icon-calculator.svg" alt="icon for Calculator"></div>
+        </div>
+        <div class="card karma">
           <h2>Karma</h2>
           <p>  Regularly evaluates our talent to ensure quality</p>
-          <div class="icon"><img src="images/icon-karma.svg" alt="icon for karma"></article>
-        </article>
+          <div class="icon"><img src="images/icon-karma.svg" alt="icon for karma"></div>
+        </div>
       </div>
-    </section>
   </main>
   
   <footer>
